@@ -1,14 +1,11 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body{
-    padding-top: 70px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.4285em;
-}
-
-.ui.message>h1{
-    font-size: 60px;
-}
-
-.ui.message>p{
-    font-size: 20px;
 }

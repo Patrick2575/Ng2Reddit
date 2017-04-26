@@ -1,0 +1,13 @@
+/*-----------Header ------------------------------------*/
+.ui.header.item{
+    padding: 15px 10px;
+}
+
+/*---------- Main ------------------------------*/
+main{
+    margin-top: 2em;
+}
+
+form.ui.segment.form {
+  background-color: #F1F9FF;
+}
