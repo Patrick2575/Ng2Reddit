@@ -1,0 +1,25 @@
+.article-left{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+
+.article-right{
+    background-color: #fafafa;
+}
+
+ul.ui.list li:before {
+  content: '';
+}
+
+/*div.article-left, div.article-right{
+    margin: 0;
+    padding: 0;
+}
+.article-left{
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}*/
