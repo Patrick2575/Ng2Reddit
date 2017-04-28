@@ -15,4 +15,9 @@ export class AppComponent{
         this.articles.push(new Article('Angular2', 'https://angular.io/', 10));
         this.articles.push(new Article('Angular2', 'https://angular.io/', 10));
     }
+
+    onArticleCreated(article: Article)
+    {
+        this.articles.push(article);
+    }
 }

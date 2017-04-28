@@ -14,7 +14,7 @@ export class Article{
     {
         this.title = titele;
         this.link  = link;
-        this.votes = votes;
+        this.votes = votes || 0;
     }
 
     /**
@@ -31,5 +31,18 @@ export class Article{
     voteDown()
     {
         --this.votes;
+    }
+
+    /**
+     *  retuns article domain based on given link
+     * For examble: for 'https://angular.io/' domain wiil be 'angular.io'
+     */
+    domain(): string {
+        try {
+            const link: string = this.link.split('//')[1];
+            return link.split('/')[0];
+        } catch (err) {
+            return null;
+        }
     }
 }

@@ -1,11 +1,16 @@
-<form class="ui large form  clearing  segment">
-    <div class="field">
+<form class="ui large form  clearing  segment" (ngSubmit)="onSubmit()" *ngIf="readyForInput">
+    <ul class="ui error message" *ngIf="(link.invalid && link.touched) || (title.invalid && title.touched)" > 
+        <li *ngIf="title.invalid && title.touched">Article title is require</li>
+        <li *ngIf="link.invalid && link.touched">Article link is require</li>
+    </ul>
+    <div class="field" [ngClass]="{'error': title.invalid && title.touched}">
         <label for="title">Title:</label>
-        <input type="text" name="title" placeholder="title" required>
+        <input type="text" name="title" placeholder="title" required [(ngModel)]= "newArticle.title" #title="ngModel">
     </div>
-    <div class="field">
+
+    <div class="field" [ngClass]="{'error': link.invalid && link.touched}">
         <label for="url">Link:</label>
-        <input type="text" name="link" placeholder="link" required>
+        <input type="text" name="link" placeholder="link" required [(ngModel)]="newArticle.link" #link="ngModel">
     </div>
-    <div><button type="submit" class="ui right floated primary button">Create Article</button></div>
+    <div><button type="submit" class="ui right floated primary button" [disabled]="title.invalid || link.invalid">Create Article</button></div>
 </form>

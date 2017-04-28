@@ -1,3 +1,9 @@
 form.ui.segment.form {
   background-color: #F1F9FF;
 }
+.ui.form .error.message
+{
+    margin:0;
+    margin-bottom: 0.5em;
+    display: block;
+}

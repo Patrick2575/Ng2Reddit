@@ -11,6 +11,10 @@
     background-color: #fafafa;
 }
 
+a.articlre-tile{
+    display: block;
+}
+
 ul.ui.list li:before {
   content: '';
 }

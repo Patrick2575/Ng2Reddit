@@ -1,6 +1,6 @@
 
 <!-- left column for votes-->
-<div class="four wide column center aligned article-left">
+<div class="three wide column center aligned article-left">
     <div class="ui statistic">
         <div class="value">{{article.votes}}</div>
         <div class="label">Points</div>
@@ -8,8 +8,11 @@
 </div>
 
 <!-- right column -->
-<div class="twelve wide column article-right">
-    <h1 class="ui header">{{article.title}}</h1>
+<div class="eleven wide column article-right">
+    <a class="ui large header articlre-tile" href="{{article.link}}">
+        {{article.title}}
+        <span class="sub header"> ({{article.domain()}})</span>
+    </a>
     <ul class="ui horizontal list">
         <li class="item">
             <a href (click)="voteUp()">
